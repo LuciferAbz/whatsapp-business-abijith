@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>WhatsApp Business — Look Professional in 5 Minutes</title>
+<title>WhatsApp Business - Look Professional in 5 Minutes</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -667,6 +667,8 @@ nav {
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 .testimonial-card:hover { box-shadow: var(--shadow-sm); }
 .testi-quote-mark {
@@ -688,14 +690,20 @@ nav {
   margin-bottom: 16px;
   position: relative;
   z-index: 1;
+  flex: 1;
 }
 .testimonial-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
+  margin-top: auto;
 }
-.testimonial-author { display: flex; align-items: center; gap: 10px; }
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
 .author-avatar {
   width: 36px; height: 36px;
   border-radius: 50%;
@@ -873,9 +881,8 @@ nav {
   background: linear-gradient(90deg, transparent, rgba(37,211,102,0.3) 50%, transparent);
 }
 .part-b-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  display: inline-block;
+  width: fit-content;
   background: rgba(37,211,102,0.1);
   color: var(--green);
   font-family: 'Sora', sans-serif;
@@ -984,6 +991,10 @@ footer a:hover { color: rgba(255,255,255,0.5); }
 .fade-in:nth-child(2) { transition-delay: 0.08s; }
 .fade-in:nth-child(3) { transition-delay: 0.16s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+}
+
 /* ── CTA PARA ── */
 .cta-para-em { font-style: italic; }
 
@@ -1057,7 +1068,7 @@ footer a:hover { color: rgba(255,255,255,0.5); }
     margin-bottom: 32px;
     max-width: 480px;
   }
-  .hero-mockup { margin: 0; }
+  .hero-mockup { margin: 0; max-width: 380px; width: 100%; }
   .fud-row { justify-content: flex-start; margin-top: 14px; }
   .proof-row { justify-content: flex-start; margin-top: 16px; }
   .btn-primary { max-width: 360px; font-size: 17px; }
@@ -1115,8 +1126,9 @@ footer a:hover { color: rgba(255,255,255,0.5); }
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+    align-items: stretch;
   }
-  .testimonial-card { margin-bottom: 0; }
+  .testimonial-card { margin-bottom: 0; height: 100%; }
 
   /* ── PRIMARY CTA ── */
   .cta-block { padding: 80px 0; }
@@ -1167,12 +1179,6 @@ footer a:hover { color: rgba(255,255,255,0.5); }
 
   /* ── STICKY CTA — hide on desktop ── */
   .sticky-cta { display: none; }
-
-  /* ── SECTION LABELS — centered on wide sections via wrapper ── */
-  .benefits .section-label,
-  .cta-block .section-label {
-    display: inline-flex;
-  }
 }
 
 @media (min-width: 1100px) {
@@ -1321,7 +1327,7 @@ footer a:hover { color: rgba(255,255,255,0.5); }
     </div>
 
     <div class="problem-resolution">
-      WhatsApp Business fixes every one of these for Free.
+      WhatsApp Business fixes every one of these for free.
       <span>In under 5 minutes. On the same number you already use.</span>
     </div>
   </div>
@@ -1386,7 +1392,7 @@ footer a:hover { color: rgba(255,255,255,0.5); }
       <div class="trust-point">
         <div class="trust-check">✓</div>
         <p>
-          <strong>The app is free. Always has been.</strong>
+          <strong>No subscription. No credit card. Ever.</strong>
           <span>The app is free. There is a paid version for large enterprises — that's completely different. What you're downloading costs nothing, now or later.</span>
         </p>
       </div>
@@ -1417,7 +1423,6 @@ footer a:hover { color: rgba(255,255,255,0.5); }
             <div class="author-role">Tiffin Service Owner, Pune</div>
           </div>
         </div>
-        <div class="testi-stars">★★★★★</div>
       </div>
     </div>
 
@@ -1433,7 +1438,6 @@ footer a:hover { color: rgba(255,255,255,0.5); }
             <div class="author-role">Home Baker, Bengaluru</div>
           </div>
         </div>
-        <div class="testi-stars">★★★★★</div>
       </div>
     </div>
 
@@ -1449,7 +1453,6 @@ footer a:hover { color: rgba(255,255,255,0.5); }
             <div class="author-role">Clothing Boutique Owner, Ahmedabad</div>
           </div>
         </div>
-        <div class="testi-stars">★★★★★</div>
       </div>
     </div>
     </div>
@@ -1461,7 +1464,7 @@ footer a:hover { color: rgba(255,255,255,0.5); }
 <!-- ══ PRIMARY CTA ══ -->
 <section class="cta-block">
   <div class="container fade-in">
-    <div class="label-wrap"><div class="section-label">Get Started</div></div>
+    <div class="section-label">Get Started</div>
     <h2>5 minutes from now, customers who message you get a real business, not a random number.</h2>
     <p>Download WhatsApp Business, set up your profile, and turn on auto-replies — before your next customer messages you.</p>
     <a href="#" class="btn-primary">📲 Get WhatsApp Business Free →</a>
@@ -1476,7 +1479,7 @@ footer a:hover { color: rgba(255,255,255,0.5); }
     <h2>Questions you're probably asking.</h2>
 
     <div class="faq-list">
-      <div class="faq-item open">
+      <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
           Do I need a GST number or shop registration?
           <div class="faq-arrow">▾</div>
