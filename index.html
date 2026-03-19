@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WhatsApp Business — Look Professional in 5 Minutes</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #25D366;
+    --green-dark: #128C7E;
+    --green-deep: #075E54;
+    --green-light: #d9fae8;
+    --green-mid: #e7f9f0;
+    --amber: #F59E0B;
+    --amber-bg: #FFF7ED;
+    --amber-border: #FED7AA;
+    --amber-text: #92400E;
+    --amber-dark: #78350F;
+    --charcoal: #1a1a1a;
+    --mid: #4a4a4a;
+    --muted: #7a7a7a;
+    --border: #e8e8e8;
+    --white: #ffffff;
+    --off-white: #f9fafb;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--charcoal);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 72px;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Sora', sans-serif; line-height: 1.2; }
+
+  .container { max-width: 480px; margin: 0 auto; padding: 0 20px; }
+
+  .section-label {
+    display: inline-block;
+    font-family: 'Sora', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--green-dark); background: var(--green-mid);
+    padding: 5px 12px; border-radius: 20px; margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    display: block; width: 100%;
+    background: var(--green); color: var(--white);
+    font-family: 'Sora', sans-serif; font-weight: 700; font-size: 17px;
+    padding: 18px 24px; border-radius: 14px; border: none; cursor: pointer;
+    text-align: center; text-decoration: none; letter-spacing: 0.2px;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.15s ease;
+  }
+  .btn-primary:active { transform: scale(0.98); }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--green-deep); color: var(--white);
+    text-align: center; padding: 10px 16px;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.01em;
+  }
+  .topbar span { color: var(--green); }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 8px; }
+  .nav-logo-icon {
+    width: 32px; height: 32px; background: var(--green);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;
+  }
+  .nav-logo-text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px; color: var(--charcoal); }
+  .nav-cta {
+    background: var(--green); color: white; font-family: 'Sora', sans-serif;
+    font-weight: 600; font-size: 13px; padding: 9px 16px; border-radius: 10px;
+    text-decoration: none; border: none; cursor: pointer;
+  }
+
+  /* ── DIVIDER ── */
+  .divider { height: 5px; background: linear-gradient(90deg, var(--green-mid), var(--green-light), var(--green-mid)); }
+
+  /* ── HERO (dark) ── */
+  .hero {
+    background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-dark) 65%, #1dbf62 100%);
+    padding: 48px 0 52px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -60px; right: -60px;
+    width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.13); border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 20px; padding: 6px 14px;
+    font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 20px;
+  }
+  .hero-badge .dot {
+    width: 7px; height: 7px; background: var(--green);
+    border-radius: 50%; animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+  }
+  .hero h1 { font-size: 34px; font-weight: 800; color: var(--white); margin-bottom: 16px; line-height: 1.15; }
+  .hero h1 span { color: var(--green); }
+  .hero p { font-size: 16px; color: rgba(255,255,255,0.82); margin-bottom: 36px; line-height: 1.65; }
+
+  .hero-mockup {
+    background: var(--white); border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.25);
+    padding: 16px; margin: 0 0 32px; text-align: left; position: relative; z-index: 1;
+  }
+  .mockup-header {
+    display: flex; align-items: center; gap: 10px;
+    padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 12px;
+  }
+  .mockup-avatar {
+    width: 40px; height: 40px; background: var(--green); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+  }
+  .mockup-name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 14px; }
+  .mockup-subtitle { font-size: 12px; color: var(--green-dark); font-weight: 500; }
+  .mockup-verified {
+    margin-left: auto; background: var(--green-mid);
+    color: var(--green-dark); font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 20px;
+  }
+  .mockup-bubble {
+    background: var(--green-mid); border-radius: 4px 14px 14px 14px;
+    padding: 10px 12px; font-size: 13.5px; color: var(--charcoal);
+    line-height: 1.5; margin-bottom: 8px; max-width: 88%;
+  }
+  .mockup-bubble.reply {
+    background: #f0f0f0; border-radius: 14px 4px 14px 14px; margin-left: auto;
+  }
+  .mockup-time { font-size: 11px; color: var(--muted); text-align: right; margin-top: 4px; }
+
+  .fud-row { display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+  .fud-chip {
+    font-size: 12.5px; color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px; padding: 5px 12px; font-weight: 500;
+  }
+
+  .proof-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 10px; margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.75);
+  }
+  .avatars { display: flex; }
+  .avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.3); background: var(--green-light);
+    margin-left: -8px; font-size: 11px; font-weight: 700; color: var(--green-deep);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .avatars .avatar:first-child { margin-left: 0; }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--green-deep); padding: 18px 20px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center;
+  }
+  .stat { padding: 0 8px; border-right: 1px solid rgba(255,255,255,0.12); }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-size: 18px; font-weight: 800; color: var(--green); display: block; line-height: 1.2; }
+  .stat-label { font-size: 10px; color: rgba(255,255,255,0.55); font-weight: 500; line-height: 1.4; margin-top: 3px; display: block; }
+
+  /* ── PROBLEM ── */
+  .problem { padding: 52px 0; background: var(--white); }
+  .problem h2 { font-size: 26px; font-weight: 800; margin-bottom: 10px; }
+  .problem .intro { color: var(--mid); margin-bottom: 24px; font-size: 15px; }
+
+  .story-block {
+    background: var(--amber-bg); border: 1px solid var(--amber-border);
+    border-radius: 16px; padding: 20px 20px 20px 22px;
+    margin-bottom: 20px; position: relative;
+  }
+  .story-block::before {
+    content: '"'; font-size: 64px; color: var(--amber-border);
+    position: absolute; top: -10px; left: 14px;
+    line-height: 1; font-family: Georgia, serif;
+  }
+  .story-block p { font-size: 15px; line-height: 1.8; color: var(--amber-text); padding-top: 22px; }
+  .story-block p strong { font-weight: 700; color: var(--amber-dark); }
+
+  .pain-cards { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+  .problem-card {
+    background: var(--amber-bg); border: 1px solid var(--amber-border);
+    border-radius: 12px; padding: 14px; display: flex; gap: 10px; align-items: flex-start;
+  }
+  .problem-icon { font-size: 20px; flex-shrink: 0; }
+  .problem-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 3px; color: var(--amber-dark); }
+  .problem-card p { font-size: 14px; color: var(--amber-text); line-height: 1.55; }
+
+  .problem-resolution {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    border-radius: 16px; padding: 20px; color: white;
+    font-family: 'Sora', sans-serif; font-weight: 600; font-size: 16px;
+    line-height: 1.45; text-align: center;
+  }
+  .problem-resolution span {
+    display: block; font-size: 13px; font-weight: 400;
+    font-family: 'DM Sans', sans-serif; opacity: 0.9; margin-top: 4px;
+  }
+
+  /* ── BENEFITS ── */
+  .benefits { padding: 52px 0; background: var(--off-white); }
+  .benefits h2 { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+  .benefits .subtitle { color: var(--mid); font-size: 15px; margin-bottom: 28px; }
+
+  .benefit-card {
+    background: var(--white); border-radius: 20px;
+    border: 1px solid var(--border); padding: 22px; margin-bottom: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .benefit-card.featured {
+    border: 2px solid var(--green); background: #f6fef9; position: relative;
+  }
+  .featured-tag {
+    position: absolute; top: -11px; left: 20px;
+    background: var(--green); color: white; font-family: 'Sora', sans-serif;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .benefit-icon-wrap {
+    width: 50px; height: 50px; background: var(--green-mid);
+    border-radius: 14px; display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin-bottom: 14px;
+  }
+  .benefit-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+  .benefit-card p { font-size: 14.5px; color: var(--mid); line-height: 1.6; }
+
+  /* ── TRUST ── */
+  .trust { padding: 52px 0; background: var(--white); }
+  .trust h2 { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+  .trust .subtitle { color: var(--mid); font-size: 15px; margin-bottom: 28px; }
+
+  .trust-points { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+  .trust-point { display: flex; gap: 12px; align-items: flex-start; }
+  .trust-check {
+    width: 22px; height: 22px; background: var(--green); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 11px; color: white; font-weight: 800; margin-top: 1px;
+  }
+  .trust-point p { font-size: 14px; line-height: 1.55; }
+  .trust-point p strong { font-weight: 700; }
+  .trust-point p span { color: var(--muted); font-size: 13px; display: block; margin-top: 2px; }
+
+  .testi-heading {
+    font-size: 18px; font-weight: 700;
+    color: var(--charcoal); margin-bottom: 20px;
+  }
+
+  .testimonial-card {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 16px; padding: 20px; margin-bottom: 14px;
+  }
+  .stars { font-size: 13px; color: var(--amber); letter-spacing: 2px; margin-bottom: 10px; }
+  .testimonial-text {
+    font-size: 14.5px; color: var(--charcoal); line-height: 1.65;
+    font-style: italic; margin-bottom: 14px;
+  }
+  .testimonial-footer {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  }
+  .testimonial-author { display: flex; align-items: center; gap: 10px; }
+  .author-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 700; font-family: 'Sora', sans-serif;
+    color: white; flex-shrink: 0;
+  }
+  .author-name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px; }
+  .author-role { font-size: 11.5px; color: var(--muted); }
+  .testi-stars { color: var(--amber); font-size: 12px; letter-spacing: 1px; flex-shrink: 0; }
+
+  /* ── PRIMARY CTA ── */
+  .cta-block {
+    padding: 52px 0;
+    background: linear-gradient(180deg, var(--green-mid) 0%, #e5f9ef 100%);
+    text-align: center;
+  }
+  .cta-block h2 { font-size: 26px; font-weight: 800; margin-bottom: 12px; line-height: 1.2; }
+  .cta-block p { color: var(--mid); font-size: 15px; margin-bottom: 28px; line-height: 1.6; }
+  .cta-micro { font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+  /* ── FAQ ── */
+  .faq { padding: 52px 0; background: var(--white); }
+  .faq h2 { font-size: 26px; font-weight: 800; margin-bottom: 28px; }
+  .faq-list { display: flex; flex-direction: column; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:first-of-type { border-top: 1px solid var(--border); }
+  .faq-q {
+    width: 100%; background: none; border: none;
+    font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 600;
+    color: var(--charcoal); text-align: left; padding: 18px 0; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; line-height: 1.4;
+  }
+  .faq-arrow {
+    flex-shrink: 0; width: 24px; height: 24px; background: var(--green-mid);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; color: var(--green-dark); transition: transform 0.2s;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--muted); line-height: 1.75; padding-bottom: 18px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    padding: 56px 0 48px;
+    background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-dark) 100%);
+    text-align: center; color: white;
+  }
+  .final-cta h2 { font-size: 26px; font-weight: 800; margin-bottom: 12px; line-height: 1.2; color: white; }
+  .final-cta p { font-size: 15px; opacity: 0.88; margin-bottom: 28px; line-height: 1.6; }
+  .btn-white {
+    display: block; width: 100%; background: white; color: var(--green-deep);
+    font-family: 'Sora', sans-serif; font-weight: 700; font-size: 17px;
+    padding: 18px 24px; border-radius: 14px; border: none; cursor: pointer;
+    text-align: center; text-decoration: none; box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  }
+  .final-cta .cta-micro { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 12px; }
+
+  /* ── PART B ── */
+  .part-b { padding: 52px 0; background: #0f1f17; color: #e0e0e0; }
+  .part-b-label {
+    display: inline-block; background: rgba(37,211,102,0.15); color: var(--green);
+    font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px;
+    border-radius: 20px; margin-bottom: 10px; border: 1px solid rgba(37,211,102,0.25);
+  }
+  .part-b h2 { font-size: 22px; font-weight: 800; color: white; margin-bottom: 6px; }
+  .part-b .part-b-sub { font-size: 14px; color: #888; margin-bottom: 28px; }
+  .answer-card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px; padding: 20px; margin-bottom: 12px;
+  }
+  .answer-q { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 14px; color: var(--green); margin-bottom: 8px; line-height: 1.4; }
+  .answer-a { font-size: 14px; color: #c0c0c0; line-height: 1.65; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--green-deep); color: rgba(255,255,255,0.45);
+    font-size: 12.5px; text-align: center; padding: 24px 20px; line-height: 1.9;
+  }
+  footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+  /* ── STICKY CTA ── */
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--white); border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    padding: 12px 20px; z-index: 200;
+    transform: translateY(100%); transition: transform 0.3s ease;
+  }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta a {
+    display: block; width: 100%; background: var(--green); color: white;
+    font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700;
+    padding: 14px; border-radius: 12px; text-align: center; text-decoration: none;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+  }
+
+  /* ── SCROLL FADE ── */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">✅ <span>100% Free</span> · No registration needed · Works on your existing number</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">💬</div>
+    <span class="nav-logo-text">WhatsApp Business</span>
+  </div>
+  <a class="nav-cta" href="#get-started">Get Free →</a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="container">
+    <h1>Look <span>Professional</span> on WhatsApp in 5 Minutes</h1>
+    <p>Your customers are already on WhatsApp. Now give them something worth messaging: a profile, auto-replies, and a catalogue. Free.</p>
+
+    <div class="hero-mockup">
+      <div class="mockup-header">
+        <div class="mockup-avatar">🛍️</div>
+        <div>
+          <div class="mockup-name">Ravi's Tiffin Service</div>
+          <div class="mockup-subtitle">Business Account · Pune</div>
+        </div>
+        <div class="mockup-verified">✓ Business</div>
+      </div>
+      <div class="mockup-bubble reply">
+        Hi
+        <div class="mockup-time">9:03 AM</div>
+      </div>
+      <div class="mockup-bubble">
+        🙏 Namaste! Welcome to Ravi's Tiffin Service.<br/>We deliver fresh home-cooked meals Mon–Sat, 12pm–3pm.<br/>Reply <strong>MENU</strong> to see today's thali. 😊
+        <div class="mockup-time">Auto-reply · Sent instantly</div>
+      </div>
+      <div class="mockup-bubble reply">
+        MENU
+        <div class="mockup-time">9:04 AM</div>
+      </div>
+    </div>
+
+    <a href="#get-started" class="btn-primary" id="get-started">📲 Get WhatsApp Business Free →</a>
+    <div class="fud-row">
+      <span class="fud-chip">✓ Free Download</span>
+      <span class="fud-chip">✓ Your current number</span>
+      <span class="fud-chip">✓ Android & iOS</span>
+    </div>
+    <div class="proof-row">
+      <div class="avatars">
+        <div class="avatar">R</div>
+        <div class="avatar">M</div>
+        <div class="avatar">P</div>
+      </div>
+      <span>50 lakh+ Indian businesses use it every day</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <span class="stat-num">200M+</span>
+    <span class="stat-label">Businesses Worldwide</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">4.5★</span>
+    <span class="stat-label">App Store Rating</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">5 Min</span>
+    <span class="stat-label">To Set Up</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ PROBLEM + VALUE ══ -->
+<section class="problem">
+  <div class="container fade-in">
+    <div class="section-label">Sound Familiar?</div>
+    <h2>A personal number is quietly costing you customers</h2>
+    <p class="intro">It's a slow leak. Customers leave, orders don't come in, and the only explanation is that someone else picked up the message first.</p>
+
+    <div class="story-block">
+      <p>It's Sunday evening. You're having dinner with your family. A customer messages asking for your price list.<br/><br/>
+      You don't see it until 10pm. By then, they've already <strong>ordered from someone else.</strong><br/><br/>
+      Your product was fine. Your price was fair.<br/><br/>
+      The other person just <strong>replied first.</strong></p>
+    </div>
+
+    <p style="color:var(--mid);font-size:15px;margin-bottom:12px;">And that's not the only problem.</p>
+
+    <div class="pain-cards">
+      <div class="problem-card">
+        <div class="problem-icon">😬</div>
+        <div>
+          <h4>Customers don't trust random numbers</h4>
+          <p>They see a number with no name, no logo, no business info. The first thought is: is this even a real shop?</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📵</div>
+        <div>
+          <h4>Missed messages = lost orders</h4>
+          <p>You replied 3 hours late. They already ordered from someone else. With no auto-reply, every missed message is a missed sale.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔀</div>
+        <div>
+          <h4>Work and personal life tangled</h4>
+          <p>Your order messages are buried inside personal family chats. One wrong forward is all it takes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-resolution">
+      WhatsApp Business fixes every one of these for Free.
+      <span>In under 5 minutes. On the same number you already use.</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ KEY BENEFITS ══ -->
+<section class="benefits">
+  <div class="container fade-in">
+    <div class="section-label">What You Get</div>
+    <h2>Three features. Real difference.</h2>
+    <p class="subtitle">What your customers experience from the moment they message you.</p>
+
+    <div class="benefit-card">
+      <div class="benefit-icon-wrap">🏪</div>
+      <h3>A profile that builds instant trust</h3>
+      <p>Customers see "Ramesh Medical Store" instead of "+91 98765 XXXXX". Add your business name, logo, address, working hours, and website. That alone builds instant trust before the conversation even starts.</p>
+    </div>
+
+    <div class="benefit-card featured">
+      <div class="featured-tag">Most Impactful</div>
+      <div class="benefit-icon-wrap">⚡</div>
+      <h3>Auto-replies that work while you sleep</h3>
+      <p>You don't have to be there. Set a greeting for new customers, set an away message for after hours, and it runs on its own. Weekdays, weekends, 2am — it keeps going without you.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-icon-wrap">🛍️</div>
+      <h3>A free product catalogue inside WhatsApp</h3>
+      <p>Add photos, prices, and descriptions of what you sell. Customers can browse everything and place an order over WhatsApp itself. No website or app needed.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ TRUST / REASSURANCE ══ -->
+<section class="trust">
+  <div class="container fade-in">
+    <div class="section-label">Before You Download</div>
+    <h2>We know "free" sounds too good. Here's what's really happening.</h2>
+    <p class="subtitle">Four things you should know before you tap that button.</p>
+
+    <div class="trust-points">
+      <div class="trust-point">
+        <div class="trust-check">✓</div>
+        <p>
+          <strong>Made by WhatsApp itself</strong>
+          <span>This is the official WhatsApp Business app by Meta — the same company behind WhatsApp, Instagram, and Facebook. Not a third-party app.</span>
+        </p>
+      </div>
+      <div class="trust-point">
+        <div class="trust-check">✓</div>
+        <p>
+          <strong>Your same number, your same chats</strong>
+          <span>Use the mobile number you already have. Move it to a business account and your personal WhatsApp stays exactly as it is. Same phone, same contacts, nothing deleted.</span>
+        </p>
+      </div>
+      <div class="trust-point">
+        <div class="trust-check">✓</div>
+        <p>
+          <strong>The app is free. Always has been.</strong>
+          <span>The app is free. There is a paid version for large enterprises — that's completely different. What you're downloading costs nothing, now or later.</span>
+        </p>
+      </div>
+      <div class="trust-point">
+        <div class="trust-check">✓</div>
+        <p>
+          <strong>Used by lakhs of businesses across India</strong>
+          <span>Kirana shops, home bakers, tailors, tutors, tiffin services. Businesses just like yours, running this on basic data plans all across India.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:8px;">Real Business Owners</div>
+    <h3 class="testi-heading">What changed after they switched.</h3>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Pehle log message karte the toh pata hi nahi chalta kaun hai. Ab profile dekh ke khud trust karte hain. Orders 30% badh gaye pehle mahine mein hi."</p>
+      <div class="testimonial-footer">
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#e67e22;">R</div>
+          <div>
+            <div class="author-name">Ravi Sharma</div>
+            <div class="author-role">Tiffin Service Owner, Pune</div>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"I run a home bakery. My customers used to message at midnight and I'd miss them. Now I wake up to enquiries that came in at 2am — already answered. I've never missed an order since."</p>
+      <div class="testimonial-footer">
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#8e44ad;">P</div>
+          <div>
+            <div class="author-name">Priya Menon</div>
+            <div class="author-role">Home Baker, Bengaluru</div>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Ek number se personal aur business dono handle karna bahut mushkil tha. Ab sab alag hai. Professional lagta hai. Aur raat ko phone band kar ke so sakta hoon ab."</p>
+      <div class="testimonial-footer">
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#2980b9;">A</div>
+          <div>
+            <div class="author-name">Arjun Patel</div>
+            <div class="author-role">Clothing Boutique Owner, Ahmedabad</div>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ PRIMARY CTA ══ -->
+<section class="cta-block">
+  <div class="container fade-in">
+    <div class="section-label">Get Started</div>
+    <h2>5 minutes from now, customers who message you get a real business, not a random number.</h2>
+    <p>Download WhatsApp Business, set up your profile, and turn on auto-replies — before your next customer messages you.</p>
+    <a href="#" class="btn-primary">📲 Get WhatsApp Business Free →</a>
+    <p class="cta-micro">All you need is your phone.</p>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="faq">
+  <div class="container fade-in">
+    <div class="section-label">FAQ</div>
+    <h2>Questions you're probably asking.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do I need a GST number or shop registration?
+          <div class="faq-arrow">▾</div>
+        </button>
+        <p class="faq-a">No registration required. Anyone with a mobile number can set up a WhatsApp Business account, whether you're a registered company or running a home business.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do I need a new phone number or a new SIM?
+          <div class="faq-arrow">▾</div>
+        </button>
+        <p class="faq-a">No. Use your existing number. Just download WhatsApp Business and follow the setup. Your personal WhatsApp stays untouched on the same phone.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          I'm not good with technology. Can I still set this up?
+          <div class="faq-arrow">▾</div>
+        </button>
+        <p class="faq-a">If you can use regular WhatsApp, you can do this. Most users have their full profile live in under 5 minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ FINAL CTA + FOOTER ══ -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Your next customer is already on WhatsApp. Will you be ready when they message?</h2>
+    <p>Join 50 lakh+ Indian business owners who already look professional. All for free.</p>
+    <a href="#" class="btn-white">📲 Get WhatsApp Business Free →</a>
+    <p class="cta-micro">Start in the next 5 minutes.</p>
+  </div>
+</section>
+
+<!-- ══ PART B — THINKING ══ -->
+<section class="part-b">
+  <div class="container">
+    <div class="part-b-label">My Thinking</div>
+    <h2>How I approached this task</h2>
+    <p class="part-b-sub">5 short answers · Performance Marketing Task · MalCare</p>
+
+    <div class="answer-card">
+      <div class="answer-q">Q1. Which part did you spend the most time on and why?</div>
+      <div class="answer-a">The hero and the Problem section. Both are where you either earn the scroll or lose it — the hero has to match the ad, and the problem section has to make the reader feel seen before they'll trust anything else on the page.</div>
+    </div>
+    <div class="answer-card">
+      <div class="answer-q">Q2. Which section are you least confident about?</div>
+      <div class="answer-a">The benefits section. Three identical cards on mobile tend to lose the reader by the third one, and I'd want to give the auto-replies card more visual weight since that's the feature that actually makes this audience act.</div>
+    </div>
+    <div class="answer-card">
+      <div class="answer-q">Q3. If conversion is poor, what is the first thing you would try?</div>
+      <div class="answer-a">Test the headline first — pit the current version against something outcome-first like "Get More Orders on WhatsApp, Starting Today." Most bounces happen in the first few seconds, so that's where I'd look before changing anything else.</div>
+    </div>
+    <div class="answer-card">
+      <div class="answer-q">Q4. What did you intentionally leave out even though it's common on landing pages?</div>
+      <div class="answer-a">Navigation, comparison tables, and social share buttons. All three pull attention away from the one action I want the user to take, and on cold traffic that's a conversion you don't get back.</div>
+    </div>
+    <div class="answer-card">
+      <div class="answer-q">Q5. Which skill was hardest here: copy, structure, or UX?</div>
+      <div class="answer-a">Copy. This audience needs short sentences, zero jargon, and an emotional angle that lands through PAS — and the Hindi-English in the testimonials was a deliberate choice to reflect how they actually talk, not just translate it.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  WhatsApp Business is an official product of Meta Platforms, Inc.<br/>
+  This page was created by Abijith Mahendran<br/>
+  <br/>
+  <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a>
+</footer>
+
+<!-- STICKY BOTTOM CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#">📲 Get WhatsApp Business Free →</a>
+</div>
+
+<script>
+  function toggleFaq(btn) {
+    btn.closest('.faq-item').classList.toggle('open');
+  }
+  const stickyCta = document.getElementById('stickyCta');
+  window.addEventListener('scroll', () => {
+    stickyCta.classList.toggle('visible', window.scrollY > 400);
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
